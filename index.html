@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image:url(http://tfkapi.top/API/dmt_pe.php?return=json/img/);
+    background-size:500px 1000px
+
+}
+
+
+
+.container{
+    position: relative;
+    position:absolute;
+    left:1px
+}
+.container .navigation{
+  
+   background-image:url(https://gchat.qpic.cn/gchatpic_new/2031556811/642579447-2963084536-0B1CAEF63F219E9C2D5E3F74E95B2566/0?term=2&is_origin=0);
+   background-size:300px 800px;
+    position: relative;
+    width: 10px;
+    height: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.container .navigation.active{
+    width: 300px;
+}
+.container .navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.container .navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+.container .navigation ul li:hover{
+    background: #efefef;
+}
+.container .navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color:white;
+    font-weight: 500;
+}
+.container .navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 80px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.container .navigation ul li a .icon .fa{
+    font-size: 30px;
+}
+.container .navigation ul li a .title{
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.toggle{
+    position: absolute;
+    top: calc(50% - 20px);
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    cursor: pointer;
+    border: 5px solid #6843d1;
+    border-radius: 50%;
+}
+.toggle::before{
+    content: '\f054';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 35px;
+    text-align: center;
+    font-size: 16px;
+    color: #6843d1;
+}
+.toggle.active::before{
+    content: '\f053';
+}
+
+
+
+
+
+
+</style>
+
+    <div class="container">
+  
+        <div class="navigation">
+        
+        
+            <ul>
+                <li>
+                    <a href="http://.baidu.com/">
+                        <span class="icon"><i class="fa fa-home"></i></span>
+                        <span class="title">首页</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-set"></i></span>
+                        <span class="title">测试</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                        <i class=""></i></span>
+                        <span class="title">测试</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class=""></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class=""></i></span>
+                        <span class="title">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class=""></i></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class=""></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+       
+        <div class="toggle"></div>
+        
+    </div>
+ 
+    
+    
+    
+
+    <script>
+        const navigation = document.querySelector('.navigation');
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
